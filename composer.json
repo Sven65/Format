@@ -1,0 +1,18 @@
+{
+    "name": "mackan90096/Format",
+    "description": "A PHP class for formatting text.",
+    "keywords": ["format", "text", "links"],
+    "homepage": "https://github.com/Sven65/Format",
+    "licence": "Apache 2.0",
+    "authors": [
+    	{
+    		"name": "Mackan90096",
+    		"email": "thormax5@gmail.com",
+    		"homepage": "https://github.com/Sven65/",
+    		"role": "Owner"
+    	}
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
