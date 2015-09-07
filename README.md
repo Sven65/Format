@@ -1,2 +1,21 @@
 # Format
 A PHP library for formatting text.
+
+To use Format, include it in your project and call the constructor,
+
+```php
+<?php
+include_once "Format.php";
+$Format = new Format;
+```
+
+This exposes one function, ``format($text, $options);``
+
+
+``$options`` is an array with how you want to format ``$text``
+
+Valid options are
+
+- ``link`` which will parse URLs
+- ``bold`` which will parse \*example\* into **example**
+- ``italic`` which will parse /example/ into *example*
