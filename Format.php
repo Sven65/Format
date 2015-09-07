@@ -61,7 +61,7 @@ class Format{
 
 	private function under($text){
 		$regex = "/_([^_]+)_/";
-		return preg_replace($regex, '&lt;sub&gt;$1&lt;&sl;sub&gt;', $text);
+		return preg_replace($regex, '&lt;ins&gt;$1&lt;&sl;ins&gt;', $text);
 	}
 
 	private function toHTML($text){

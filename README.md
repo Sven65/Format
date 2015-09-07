@@ -23,4 +23,4 @@ This exposes one function, ``format($text, $options);``
 | italic | /example/ | *example*|
 | sup    | ^example^ | <sup>example</sup> |
 | sub    | :example: | <sub>example</sub> |
-| under  | \_example\_ | <span style="text-decoration:underline">this</span>example</span> |
+| under  | \_example\_ | <ins>example</ins> |

@@ -1,6 +1,6 @@
 <!--  Test file -->
 <?php
-include_once 'Format.php';
+include_once '../Format.php';
 
 $Format = new Format;
 
