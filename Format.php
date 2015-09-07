@@ -49,9 +49,25 @@ class Format{
 		return preg_replace($regex, '&lt;s&gt;$1&lt;&sl;s&gt;', $text);
 	}
 
+	private function sup($text){
+		$regex = "/\\^([^\\^]+)\\^/";
+		return preg_replace($regex, '&lt;sup&gt;$1&lt;&sl;sup&gt;', $text);
+	}
+
+	private function sub($text){
+		$regex = "/:([^:]+):/";
+		return preg_replace($regex, '&lt;sub&gt;$1&lt;&sl;sub&gt;', $text);
+	}
+
+	private function under($text){
+		$regex = "/_([^_]+)_/";
+		return preg_replace($regex, '&lt;sub&gt;$1&lt;&sl;sub&gt;', $text);
+	}
+
 	private function toHTML($text){
 		return str_replace("&lt;", "<", str_replace("&gt;", ">", str_replace("&sl;", "/", $text)));
 	}
+
 
 	public function format($text, $options){
 		if(in_array("link", $options)){
@@ -65,6 +81,15 @@ class Format{
 		}
 		if(in_array("strike", $options)){
 			$text = $this->strike($text);
+		}
+		if(in_array("sup", $options)){
+			$text = $this->sup($text);
+		}
+		if(in_array("sub", $options)){
+			$text = $this->sub($text);
+		}
+		if(in_array("under", $options)){
+			$text = $this->under($text);
 		}
 		return $this->toHTML($text);
 	}

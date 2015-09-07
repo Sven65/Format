@@ -14,8 +14,13 @@ This exposes one function, ``format($text, $options);``
 
 ``$options`` is an array with how you want to format ``$text``
 
-Valid options are
+# Valid options
 
-- ``link`` which will parse URLs
-- ``bold`` which will parse \*example\* into **example**
-- ``italic`` which will parse /example/ into *example*
+| Option | Formats | Into |
+|--------|---------|------|
+| link   | urls    |Links |
+| bold   | \*example\* | **example** |
+| italic | /example/ | *example*|
+| sup    | ^example^ | <sup>example</sup> |
+| sub    | :example: | <sub>example</sub> |
+| under  | \_example\_ | <u>example</u> |
